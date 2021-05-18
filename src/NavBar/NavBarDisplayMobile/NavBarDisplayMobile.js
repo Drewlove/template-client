@@ -8,7 +8,7 @@ function NavBarDisplayMobile() {
   };
 
   const isMenuOpen = () => {
-    return openMenu ? "navbar__hamburger-dash open" : "navbar__hamburger-dash";
+    return openMenu ? "hamburger-open" : "";
   };
 
   return (
@@ -17,14 +17,14 @@ function NavBarDisplayMobile() {
         className="navbar__hamburger-button"
         onClick={() => handleClick()}
       >
-        <div className={isMenuOpen()}>
+        <div className={`navbar__hamburger-dash ${isMenuOpen()}`}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
       </button>
-      <div></div>
+      <div className={`navbar__links-container ${isMenuOpen()}`}></div>
     </section>
   );
 }

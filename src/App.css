@@ -189,24 +189,34 @@
   top: 28px;
 }
 
-.navbar__hamburger-dash.open span:nth-child(1) {
+.navbar__hamburger-dash.hamburger-open span:nth-child(1) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
 
-.navbar__hamburger-dash.open span:nth-child(2) {
+.navbar__hamburger-dash.hamburger-open span:nth-child(2) {
   transform: rotate(45deg);
 }
 
-.navbar__hamburger-dash.open span:nth-child(3) {
+.navbar__hamburger-dash.hamburger-open span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-.navbar__hamburger-dash.open span:nth-child(4) {
+.navbar__hamburger-dash.hamburger-open span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+.navbar__links-container.hamburger-open {
+  background-color: var(--navbar-backround-color);
+  position: absolute;
+  top: 25;
+  top: 49px;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .navbar__link {
