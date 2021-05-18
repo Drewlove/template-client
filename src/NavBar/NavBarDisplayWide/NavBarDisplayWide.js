@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import NavBarLink from "../NavBarLink/NavBarLink";
+import { LINKS } from "../NavBarLinksConfig";
 import { useLocation } from "react-router-dom";
 
 function NavBarDisplayWide() {
@@ -9,14 +10,22 @@ function NavBarDisplayWide() {
     return location.pathname === path ? "navbar__link_current-page" : "";
   };
 
+  const renderLinks = () => {
+    return LINKS.map((key) => {
+      return (
+        <NavBarLink
+          key={key.to}
+          to={key.to}
+          text={key.text}
+          isCurrentPage={isCurrentPage(key.to)}
+        />
+      );
+    });
+  };
+
   return (
     <section className="navbar__content navbar__content_display-wide">
-      <Link className={`navbar__link ${isCurrentPage("/")}`} to="/">
-        Home
-      </Link>
-      <Link className={`navbar__link ${isCurrentPage("/about")}`} to="/about">
-        About
-      </Link>
+      {renderLinks()}
     </section>
   );
 }

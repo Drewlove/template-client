@@ -24,6 +24,7 @@ function NavBarDisplayMobile() {
           <span></span>
         </div>
       </button>
+      <div></div>
     </section>
   );
 }
