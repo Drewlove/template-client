@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import NavBarLinksWrapper from "../NavBarLinksWrapper/NavBarLinksWrapper";
 
 function NavBarDisplayMobile() {
   const [openMenu, setMenu] = useState(false);
 
   const handleClick = () => {
+    if (!openMenu) {
+      document.addEventListener("mousedown", closeHamburgerMenu);
+    }
     setMenu(!openMenu);
   };
 
+  let location = useLocation();
+
+  useEffect(() => {
+    closeHamburgerMenu();
+  }, [location]);
+
   const isMenuOpen = () => {
     return openMenu ? "hamburger-open" : "";
+  };
+
+  const closeHamburgerMenu = () => {
+    // console.log(`Menu is open: ${openMenu}`);
+    if (openMenu) setMenu(!openMenu);
   };
 
   return (
@@ -24,7 +40,11 @@ function NavBarDisplayMobile() {
           <span></span>
         </div>
       </button>
-      <div className={`navbar__links-container ${isMenuOpen()}`}></div>
+      <div className={`navbar__links-container ${isMenuOpen()}`}>
+        <div className="navbar__links-content">
+          <NavBarLinksWrapper />
+        </div>
+      </div>
     </section>
   );
 }
