@@ -1,46 +1,44 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
 import NavBarLinksWrapper from "../NavBarLinksWrapper/NavBarLinksWrapper";
 
 function NavBarDisplayMobile() {
   const [openMenu, setMenu] = useState(false);
 
   const handleClick = () => {
+    console.log("clicking");
     if (!openMenu) {
       document.addEventListener("mousedown", closeHamburgerMenu);
     }
     setMenu(!openMenu);
   };
 
-  let location = useLocation();
-
-  useEffect(() => {
-    closeHamburgerMenu();
-  }, [location]);
-
-  const isMenuOpen = () => {
-    return openMenu ? "hamburger-open" : "";
-  };
-
   const closeHamburgerMenu = () => {
-    // console.log(`Menu is open: ${openMenu}`);
     if (openMenu) setMenu(!openMenu);
   };
 
+  const hasHamburgerOpenClassName = () => {
+    return openMenu ? "hamburger-open" : "";
+  };
+
   return (
-    <section className="navbar__content navbar__content_display-mobile">
+    <section
+      className="navbar__content navbar__content_display-mobile"
+      onClick={() => (openMenu ? handleClick() : null)}
+    >
       <button
         className="navbar__hamburger-button"
         onClick={() => handleClick()}
       >
-        <div className={`navbar__hamburger-dash ${isMenuOpen()}`}>
+        <div
+          className={`navbar__hamburger-dash ${hasHamburgerOpenClassName()}`}
+        >
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
       </button>
-      <div className={`navbar__links-container ${isMenuOpen()}`}>
+      <div className={`navbar__links-container ${hasHamburgerOpenClassName()}`}>
         <div className="navbar__links-content">
           <NavBarLinksWrapper />
         </div>

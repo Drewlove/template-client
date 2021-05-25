@@ -158,7 +158,7 @@
 }
 
 .navbar__hamburger-dash {
-  width: 60px;
+  width: 55px;
   height: 40px;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
@@ -209,7 +209,12 @@
   left: 50%;
 }
 
+.navbar__links-container {
+  display: none;
+}
+
 .navbar__links-container.hamburger-open {
+  display: block;
   background-color: var(--navbar-backround-color);
   position: absolute;
   top: 25;

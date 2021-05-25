@@ -10,7 +10,7 @@ function NavBarLinksWrapper() {
 
   let location = useLocation();
 
-  const isCurrentPage = (path) => {
+  const hasCurrentPageClassName = (path) => {
     return location.pathname === path ? "navbar__link_current-page" : "";
   };
 
@@ -21,7 +21,7 @@ function NavBarLinksWrapper() {
           key={key.to}
           to={key.to}
           text={key.text}
-          isCurrentPage={isCurrentPage(key.to)}
+          isCurrentPage={hasCurrentPageClassName(key.to)}
         />
       );
     });
