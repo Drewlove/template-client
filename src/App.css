@@ -251,6 +251,10 @@
 }
 
 @media only screen and (min-width: 500px) {
+  .navbar__authentication-button {
+    margin-left: auto;
+  }
+
   .navbar__content_display-wide {
     display: flex;
     height: 100%;

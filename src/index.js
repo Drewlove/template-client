@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Auth0ProviderWithHistory from "./Auth0ProviderWithHistory/Auth0ProviderWithHistory";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Auth0ProviderWithHistory />
       <App />
+      <Auth0ProviderWithHistory />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
