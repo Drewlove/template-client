@@ -20,3 +20,5 @@ Enter urls for the following:
 The allowed URLs should include the appropriate local host, usually http://localhost:3000/.
 
 Eventually, include the production urls that are also used by the app.
+
+Stylize the Auth0 login page: https://manage.auth0.com/dashboard/us/dev-twvvyq34/login_settings

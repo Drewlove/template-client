@@ -3,7 +3,7 @@ import { API_DELETE } from "../../Utilities/APImethods/API_DELETE";
 import Modal from "../../Modal/Modal";
 import { useHistory } from "react-router-dom";
 
-function FormDeleteButton(props) {
+export default function FormDeleteButton(props) {
   const history = useHistory();
 
   const [resDelete, deleteData] = API_DELETE(
@@ -103,5 +103,3 @@ function FormDeleteButton(props) {
     </div>
   );
 }
-
-export default FormDeleteButton;

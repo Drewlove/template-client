@@ -3,7 +3,7 @@ import { API_GET } from "../Utilities/APImethods/API_GET";
 // import SkeletonLoader from "../SkeletonLoader/SkeletonLoader";
 // import Error from "../Error/Error";
 
-function FetchData(props) {
+export default function FetchData(props) {
   // const [{ data, isLoading, isError, error }] = API_GET(props.endpointArr);
   const [{ data, isLoading, isError, error }] = API_GET(props.endpointArr);
 
@@ -37,5 +37,3 @@ function FetchData(props) {
 
   return <>{isLoading ? renderSkeleton() : renderResults()}</>;
 }
-
-export default FetchData;

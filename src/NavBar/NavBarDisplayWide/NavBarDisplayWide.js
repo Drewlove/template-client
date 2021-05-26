@@ -2,7 +2,7 @@ import React from "react";
 import NavBarLinksWrapper from "../NavBarLinksWrapper/NavBarLinksWrapper";
 import AuthenticationButton from "../../Authentication/AuthenticationButton/AuthenticationButton";
 
-function NavBarDisplayWide() {
+export default function NavBarDisplayWide() {
   return (
     <section className="navbar__content navbar__content_display-wide">
       <NavBarLinksWrapper />
@@ -10,5 +10,3 @@ function NavBarDisplayWide() {
     </section>
   );
 }
-
-export default NavBarDisplayWide;

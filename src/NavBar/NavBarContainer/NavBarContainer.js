@@ -2,7 +2,7 @@ import React from "react";
 import NavBarDisplayMobile from "../NavBarDisplayMobile/NavBarDisplayMobile";
 import NavBarDisplayWide from "../NavBarDisplayWide/NavBarDisplayWide";
 
-function NavBarContainer() {
+export default function NavBarContainer() {
   return (
     <nav className="navbar">
       <NavBarDisplayMobile />
@@ -10,5 +10,3 @@ function NavBarContainer() {
     </nav>
   );
 }
-
-export default NavBarContainer;

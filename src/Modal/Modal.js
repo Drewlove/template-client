@@ -1,6 +1,6 @@
 import React from "react";
 
-function Modal(props) {
+export default function Modal(props) {
   const renderButtons = () => {
     return (
       <div className="modal__button-container">
@@ -42,5 +42,3 @@ function Modal(props) {
     </div>
   );
 }
-
-export default Modal;

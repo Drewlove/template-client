@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import FormContainer from "../Form/FormContainer/FormContainer";
 import ListContainer from "../List/ListContainer/ListContainer";
 
-function AppRoutes() {
+export default function AppRoutes() {
   return (
     <Switch>
       <Route path="/form/formName/:rowId" component={FormContainer} />
@@ -11,5 +11,3 @@ function AppRoutes() {
     </Switch>
   );
 }
-
-export default AppRoutes;

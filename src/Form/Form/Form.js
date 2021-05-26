@@ -5,7 +5,7 @@ import FormSaveButton from "../../CommonFormComponents/FormSaveButton/FormSaveBu
 import FormDeleteButton from "../../CommonFormComponents/FormDeleteButton/FormDeleteButton";
 import { useParams } from "react-router-dom";
 
-function RecipeForm(props) {
+export default function RecipeForm(props) {
   const [recipe, setRecipe] = useState({
     recipe_name: "",
     flour_total: "",
@@ -159,5 +159,3 @@ function RecipeForm(props) {
     </form>
   );
 }
-
-export default RecipeForm;

@@ -4,7 +4,7 @@ import { API_SAVE } from "../../Utilities/APImethods/API_SAVE";
 import { useHistory } from "react-router-dom";
 // import { GET_ALL_ERROR_MESSAGES } from "../../ValidateForm/GET_ALL_ERROR_MESSAGES";
 
-function FormSaveButton(props) {
+export default function FormSaveButton(props) {
   const history = useHistory();
   const [resSave, saveData] = API_SAVE(
     props.formData,
@@ -88,5 +88,3 @@ function FormSaveButton(props) {
     </div>
   );
 }
-
-export default FormSaveButton;

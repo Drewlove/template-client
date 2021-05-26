@@ -1,10 +1,8 @@
 import React from "react";
 import AuthenticationButton from "../AuthenticationButton/AuthenticationButton";
 
-const AuthNav = () => (
+export default functionAuthNav()(
   <div>
     <AuthenticationButton />
   </div>
 );
-
-export default AuthNav;

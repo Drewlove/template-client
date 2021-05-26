@@ -4,7 +4,7 @@ import LogoutButton from "../LogoutButton/LogoutButton";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
-const AuthenticationButton = (props) => {
+export default function AuthenticationButton(props) {
   const { isAuthenticated } = useAuth0();
 
   return isAuthenticated ? (
@@ -12,6 +12,4 @@ const AuthenticationButton = (props) => {
   ) : (
     <LoginButton classNameProp="navbar__authentication-button" />
   );
-};
-
-export default AuthenticationButton;
+}
