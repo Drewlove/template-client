@@ -1,6 +1,5 @@
 import React from "react";
 import NavBarLink from "../NavBarLink/NavBarLink";
-import AuthenticationButton from "../../Authentication/AuthenticationButton/AuthenticationButton";
 import { useLocation } from "react-router-dom";
 
 function NavBarLinksWrapper() {
@@ -28,12 +27,7 @@ function NavBarLinksWrapper() {
     });
   };
 
-  return (
-    <>
-      {renderLinks()}
-      <AuthenticationButton />
-    </>
-  );
+  return <>{renderLinks()}</>;
 }
 
 export default NavBarLinksWrapper;

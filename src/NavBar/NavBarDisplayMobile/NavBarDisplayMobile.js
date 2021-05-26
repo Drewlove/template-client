@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBarLinksWrapper from "../NavBarLinksWrapper/NavBarLinksWrapper";
+import AuthenticationButton from "../../Authentication/AuthenticationButton/AuthenticationButton";
 
 function NavBarDisplayMobile() {
   const [openMenu, setMenu] = useState(false);
@@ -42,6 +43,7 @@ function NavBarDisplayMobile() {
         <div className="navbar__links-content">
           <NavBarLinksWrapper />
         </div>
+        <AuthenticationButton />
       </div>
     </section>
   );

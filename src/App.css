@@ -2,11 +2,10 @@
   margin: 0px;
 }
 
-/* variables */
 :root {
   --max-page-width: 500px;
-  --navbar-backround-color: black;
-  --navbar-contrast-color: white;
+  --navbar-color-one: black;
+  --navbar-color-two: white;
 }
 
 *,
@@ -128,10 +127,24 @@
 }
 
 .navbar {
-  background-color: var(--navbar-backround-color);
-  color: var(--navbar-contrast-color);
+  background-color: var(--navbar-color-one);
+  color: var(--navbar-color-two);
   height: 50px;
   padding: 5px;
+}
+
+.navbar__authentication-button {
+  background-color: var(--navbar-color-two);
+  color: var(--navbar-color-one);
+  font-weight: bold;
+  border: none;
+  width: 250px;
+  height: 50px;
+  margin: auto auto 100px auto;
+}
+
+.navbar__authentication-button:hover {
+  cursor: pointer;
 }
 
 .navbar__content {
@@ -149,7 +162,7 @@
 }
 
 .navbar__hamburger-button {
-  background-color: var(--navbar-backround-color);
+  background-color: var(--navbar-color-one);
   border: none;
 }
 
@@ -214,8 +227,8 @@
 }
 
 .navbar__links-container.hamburger-open {
-  display: block;
-  background-color: var(--navbar-backround-color);
+  display: grid;
+  background-color: var(--navbar-color-one);
   position: absolute;
   top: 25;
   top: 49px;
@@ -226,7 +239,6 @@
 
 .navbar__links-content {
   display: grid;
-  grid-gap: 50%;
   margin-top: 50px;
   margin-left: 10px;
 }
@@ -252,7 +264,10 @@
 
 @media only screen and (min-width: 500px) {
   .navbar__authentication-button {
+    margin: 0px 0px 0px auto;
     margin-left: auto;
+    height: 33px;
+    width: 75px;
   }
 
   .navbar__content_display-wide {
