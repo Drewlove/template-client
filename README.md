@@ -1,6 +1,7 @@
 # template-client
 
-#Auth-0
+# Auth-0
+
 Setting up Auth-0
 https://auth0.com/blog/complete-guide-to-react-user-authentication/
 
@@ -22,3 +23,8 @@ The allowed URLs should include the appropriate local host, usually http://local
 Eventually, include the production urls that are also used by the app.
 
 Stylize the Auth0 login page: https://manage.auth0.com/dashboard/us/dev-twvvyq34/login_settings
+
+## User's First Login
+
+To direct a user to the profile page, create a rule in Auth0
+https://manage.auth0.com/dashboard/us/dev-twvvyq34/rules

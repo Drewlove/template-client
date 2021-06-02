@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
-export default function Profile() {
+export default function Profile(props) {
   const { user } = useAuth0();
   const { name, picture, email } = user;
+  console.log(props.data);
 
   return (
     <div>
@@ -25,6 +27,7 @@ export default function Profile() {
           {JSON.stringify(user, null, 2)}
         </pre>
       </div>
+      <Link to="/app/form/profile/1">Edit</Link>
     </div>
   );
 }

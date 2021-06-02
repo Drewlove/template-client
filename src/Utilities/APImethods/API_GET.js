@@ -54,7 +54,10 @@ export const API_GET = (endpointArr) => {
         if (!didCancel) {
           //   const token = await getAccessTokenSilently();
           const token = process.env.REACT_APP_API_KEY;
+          console.log(token);
+          console.log(process.env.REACT_APP_SERVER);
           const responseArr = await fetchResponseArr(urls, token);
+          console.log(responseArr);
           const dispatchObj = await getDispatchObj(responseArr);
           dispatch(dispatchObj);
         }

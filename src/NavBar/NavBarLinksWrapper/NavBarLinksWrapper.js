@@ -5,12 +5,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 export default function NavBarLinksWrapper() {
   const navLinksAuthenticated = [
-    { to: "/app/home", text: "Home" },
+    { to: "/app/profile", text: "Profile" },
     { to: "/app/to-dos", text: "To Do" },
   ];
 
   const navLinks = [
-    { to: "/", text: "Home" },
+    { to: "/home", text: "Home" },
     { to: "/about", text: "About" },
   ];
 

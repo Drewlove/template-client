@@ -4,7 +4,6 @@ import { API_GET } from "../Utilities/APImethods/API_GET";
 // import Error from "../Error/Error";
 
 export default function FetchData(props) {
-  // const [{ data, isLoading, isError, error }] = API_GET(props.endpointArr);
   const [{ data, isLoading, isError, error }] = API_GET(props.endpointArr);
 
   const renderSkeleton = () => {
