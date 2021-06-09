@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "../HomePage/HomePage";
 import AboutPage from "../AboutPage/AboutPage";
 import ProfileContainer from "../ProfileContainer/ProfileContainer";
-import ProfileForm from "../ProfileForm/ProfileForm";
+import ProfileFormContainer from "../ProfileFormContainer/ProfileFormContainer";
 import ListContainer from "../List/ListContainer/ListContainer";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import ProtectedRoute from "../Authentication/ProtectedRoute/ProtectedRoute";
@@ -20,11 +20,11 @@ export default function Routes() {
     <Switch>
       <Route path="/home" component={HomePage} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/app/profile/form/:auth0SubID" component={ProfileForm} />
+      <ProtectedRoute
+        path="/app/profile/form/:auth0SubID"
+        component={ProfileFormContainer}
+      />
       <ProtectedRoute path="/app/profile" component={ProfileContainer} />
-
-      {/* <Route path="/app/form/profile/:rowId" component={ProfileForm} /> */}
-      {/* //app/profile/form/60b7f40ec3cd820068a2008d */}
       <Route exact path="/" component={ListContainer} />
     </Switch>
   );
