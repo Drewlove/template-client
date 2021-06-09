@@ -1,14 +1,15 @@
 import React from "react";
 import Profile from "../Profile/Profile";
 import FetchData from "../FetchData/FetchData";
+import { GET_USER } from "../Utilities/GET_USER";
 
 function ProfileContainer() {
-  // const userId = useAuthId();
+  let auth0SubID = GET_USER();
+
   return (
     <>
       <main className="main">
-        {/* <FetchData endpointArr={[`departments/${userId}`]} skeletonNumber={1}> */}
-        <FetchData endpointArr={["users"]}>
+        <FetchData endpointArr={[`users/${auth0SubID}`]}>
           <Profile />
         </FetchData>
       </main>
