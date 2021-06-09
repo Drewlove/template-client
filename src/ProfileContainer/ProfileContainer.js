@@ -10,7 +10,7 @@ function ProfileContainer() {
     <>
       <main className="main">
         <FetchData endpointArr={[`users/${auth0SubID}`]}>
-          <Profile />
+          <Profile auth0SubID={auth0SubID} />
         </FetchData>
       </main>
     </>

@@ -17,8 +17,10 @@ export default function NavBarLinksWrapper() {
   let location = useLocation();
   let { isAuthenticated } = useAuth0();
 
-  const hasCurrentPageClassName = (path) => {
-    return location.pathname === path ? "navbar__link_current-page" : "";
+  const hasCurrentPageClassName = (navLink) => {
+    let currentPathArr = location.pathname.split("/");
+    let currentPathAbbr = `/${currentPathArr[1]}/${currentPathArr[2]}`;
+    return currentPathAbbr === navLink ? "navbar__link_current-page" : "";
   };
 
   const renderLinks = () => {

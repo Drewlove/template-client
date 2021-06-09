@@ -20,9 +20,11 @@ export default function Routes() {
     <Switch>
       <Route path="/home" component={HomePage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/app/profile/form/:auth0SubID" component={ProfileForm} />
       <ProtectedRoute path="/app/profile" component={ProfileContainer} />
-      <Route path="/app/form/profile/:rowId" component={ProfileForm} />
-      {/* <Route path="/form/formName/:rowId" component={FormContainer} /> */}
+
+      {/* <Route path="/app/form/profile/:rowId" component={ProfileForm} /> */}
+      {/* //app/profile/form/60b7f40ec3cd820068a2008d */}
       <Route exact path="/" component={ListContainer} />
     </Switch>
   );
